@@ -1,27 +1,23 @@
 function toggleMode() {
   const html = document.documentElement
-  const img = document.getElementById("avatar")
-
   html.classList.toggle("light")
 
+  const img = document.querySelector("#avatar img")
+
   if (html.classList.contains("light")) {
-    img.src = "./assets/avatar2.png.jpeg"
+    img.setAttribute("src", "./assets/avatar2.png.jpeg")
     localStorage.setItem("theme", "light")
   } else {
-    img.src = "./assets/avatar.png.jpeg"
+    img.setAttribute("src", "./assets/avatar.png.jpeg")
     localStorage.setItem("theme", "dark")
   }
 }
 
-// Corrige ao carregar a página
-window.onload = function () {
-  const temaSalvo = localStorage.getItem("theme")
-  const img = document.getElementById("avatar")
+const temaSalvo = localStorage.getItem("theme")
+const html = document.documentElement
+const img = document.querySelector("#avatar img")
 
-  if (temaSalvo === "light") {
-    document.documentElement.classList.add("light")
-    img.src = "./assets/avatar2.png.jpeg"
-  } else {
-    img.src = "./assets/avatar.png.jpeg"
-  }
+if (temaSalvo === "light") {
+  html.classList.add("light")
+  img.setAttribute("src", "./assets/avatar2.png.jpeg")
 }
