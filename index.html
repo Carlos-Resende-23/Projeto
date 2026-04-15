@@ -13,8 +13,11 @@
     <title>DevLinks</title>
 
     <script>
-      const tema = localStorage.getItem("tema") || "dark"
-      document.documentElement.classList.add(tema)
+      const temaSalvo = localStorage.getItem("theme")
+
+      if (temaSalvo === "light") {
+        document.documentElement.classList.add("light")
+      }
     </script>
 
     <link rel="stylesheet" href="./style.css" />
