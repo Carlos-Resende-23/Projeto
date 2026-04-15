@@ -1,23 +1,26 @@
 function toggleMode() {
   const html = document.documentElement
+  const img = document.getElementById("avatar")
+
   html.classList.toggle("light")
 
-  const img = document.querySelector("#avatar img")
-
   if (html.classList.contains("light")) {
-    img.setAttribute("src", "./assets/avatar2.png.jpeg")
+    img.src = "./assets/avatar2.png.jpeg"
     localStorage.setItem("theme", "light")
   } else {
-    img.setAttribute("src", "./assets/avatar.png.jpeg")
+    img.src = "./assets/avatar.png.jpeg"
     localStorage.setItem("theme", "dark")
   }
 }
 
-const temaSalvo = localStorage.getItem("theme")
-const html = document.documentElement
-const img = document.querySelector("#avatar img")
+window.onload = function () {
+  const temaSalvo = localStorage.getItem("theme")
+  const img = document.getElementById("avatar")
 
-if (temaSalvo === "light") {
-  html.classList.add("light")
-  img.setAttribute("src", "./assets/avatar2.png.jpeg")
+  if (temaSalvo === "light") {
+    document.documentElement.classList.add("light")
+    img.src = "./assets/avatar2.png.jpeg"
+  } else {
+    img.src = "./assets/avatar.png.jpeg"
+  }
 }
