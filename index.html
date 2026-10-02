@@ -10,20 +10,35 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevLinks</title>
+    <meta
+      name="description"
+      content="Links e redes sociais de Carlos Resende."
+    />
+    <title>Carlos Resende | Links</title>
 
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div id="container">
       <div id="profile">
-        <img src="./assets/avatar.png.jpeg" alt="foto de Carlos Resende" />
+        <img src="./assets/avatar.png.jpeg" alt="Foto de Carlos Resende" />
         <p>Carlos Resende</p>
       </div>
 
-      <div id="switch" onclick="toggleMode()">
-        <button></button>
-        <span></span>
+      <div
+        id="switch"
+        class="theme-switch"
+        role="button"
+        tabindex="0"
+        aria-label="Alternar tema"
+      >
+        <button
+          id="theme-toggle"
+          type="button"
+          aria-label="Ativar modo claro"
+          aria-pressed="false"
+        ></button>
+        <span aria-hidden="true"></span>
       </div>
 
       <ul>
@@ -31,6 +46,7 @@
           <a
             href="https://youtube.com/@carlosresende2220?si=kmzOGwKR-6rIA5D9"
             target="_blank"
+            rel="noopener noreferrer"
             >Inscrever-se no meu canal</a
           >
         </li>
@@ -38,6 +54,7 @@
           <a
             href="https://www.facebook.com/share/19h2HqhHvW/?mibextid=wwXIfr"
             target="_blank"
+            rel="noopener noreferrer"
             >Me siga no Facebook</a
           >
         </li>
@@ -45,24 +62,36 @@
           <a
             href="https://wa.me/5554997023389?text=Ol%C3%A1%2C%20tudo%20bom%3F"
             target="_blank"
-            >Converse comigo no Whatsapp</a
+            rel="noopener noreferrer"
+            >Converse comigo no WhatsApp</a
           >
         </li>
         <li>
-          <a href="https://github.com/Carlos-Resende-23?tab=repositories"
-            >Meus Repositórios do Github</a
+          <a
+            href="https://github.com/Carlos-Resende-23?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Meus Repositórios do GitHub</a
           >
         </li>
       </ul>
+
       <div>
         <div id="social-links">
-          <a href="https://github.com/Carlos-Resende-23" target="_blank">
+          <a
+            href="https://github.com/Carlos-Resende-23"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
             <ion-icon name="logo-github"></ion-icon>
           </a>
 
           <a
             href="https://www.instagram.com/_carlosresende_?igsh=cDlhMDFsOWJ5ZjNr&utm_source=qr"
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
           >
             <ion-icon name="logo-instagram"></ion-icon>
           </a>
@@ -70,6 +99,8 @@
           <a
             href="https://youtube.com/@carlosresende2220?si=kmzOGwKR-6rIA5D9"
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
           >
             <ion-icon name="logo-youtube"></ion-icon>
           </a>
@@ -77,15 +108,19 @@
           <a
             href="https://www.linkedin.com/in/carlos-resende-1883ba2b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
           >
             <ion-icon name="logo-linkedin"></ion-icon>
           </a>
         </div>
+
         <footer>
-          &copy Feito por Carlos Resende, Todos os direitos reservados.
+          &copy; Feito por Carlos Resende. Todos os direitos reservados.
         </footer>
       </div>
     </div>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
